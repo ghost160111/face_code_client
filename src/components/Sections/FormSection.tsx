@@ -93,7 +93,18 @@ class FormSection extends PureComponent<object, FormSectionState> {
   }
 
   onSuccess(): void {
-    this.setState({ isLoading: false, isSuccess: true });
+    this.setState({ isLoading: false, isSuccess: true }, () => {
+      setTimeout(() => {
+        this.removeAlertMessage();
+      }, 5000);
+    });
+  }
+
+  removeAlertMessage(): void {
+    this.setState(prevState => ({
+      ...prevState,
+      isSuccess: false,
+    }));
   }
 
   onFormItemChange = (key: keyof FormSectionState, value: string): void => {
