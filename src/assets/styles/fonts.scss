@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Arkhip';
+    src: url('/src/assets/fonts/Arkhip_font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --arkhip: 'Arkhip', sans-serif;
+}

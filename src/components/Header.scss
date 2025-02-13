@@ -1,0 +1,26 @@
+.header {
+    position: absolute;
+    z-index: 1;
+    padding: 1rem;
+
+    @media screen and (max-width: 600px) {
+        position: static;
+    }
+}
+
+.header-image-container {
+    width: 15rem;
+    height: max-content;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header-image-container {
+        width: 10rem;
+    }
+}

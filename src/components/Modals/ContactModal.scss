@@ -1,0 +1,79 @@
+.contact-modal-overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    height: 100dvh;
+    z-index: 2;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+:has(.contact-modal-overlay.active) {
+    overflow-y: hidden;
+}
+
+.contact-modal-content {
+    background: var(--white);
+    padding: 3rem 1rem;
+    width: min(100%, 20rem);
+    height: max-content;
+}
+
+.contact-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+
+    span {
+        transition: transform 0.3s ease;
+        color: var(--white);
+    }
+
+    &:hover span {
+        transform: rotate(90deg);
+    }
+}
+
+.contact-title {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 1.25rem;
+}
+
+.contact-phone-link {
+    display: block;
+    text-align: center;
+    margin: 0.5rem auto 0;
+    color: var(--white);
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    text-decoration: unset;
+    background: var(--primary);
+    font-size: 1rem;
+    width: min(100%, 15.5rem);
+    border: 0.1rem solid var(--primary);
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background: var(--white);
+        color: var(--primary);
+    }
+}

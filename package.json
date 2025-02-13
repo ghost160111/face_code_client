@@ -1,0 +1,45 @@
+{
+  "name": "face-code-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview --host",
+    "watch": "nodemon --ext ts,tsx,js,vue --watch src --exec \"vite build\"",
+    "create": "node ./node_modules/create-react-structure/index.js"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.25.9",
+    "@fancyapps/ui": "^5.0.36",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/lodash": "^4.17.15",
+    "@types/node": "^20.14.11",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "create-react-structure": "^1.0.6",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.36.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "i18next": "^23.12.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.1.9",
+    "react-i18next": "^15.0.0",
+    "sass": "^1.80.4",
+    "tslib": "^2.8.0",
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.10"
+  }
+}
